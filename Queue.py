@@ -1,5 +1,3 @@
-# Author: OMKAR PATHAK
-
 class Queue(object):
     def __init__(self, limit = 10):
         self.queue = []
@@ -11,18 +9,15 @@ class Queue(object):
     def __str__(self):
         return ' '.join([str(i) for i in self.queue])
 
-    # to check if queue is empty
     def isEmpty(self):
         return self.size <= 0
 
-    # to add an element from the rear end of the queue
     def enqueue(self, data):
         if self.size >= self.limit:
             return -1          # queue overflow
         else:
             self.queue.append(data)
 
-        # assign the rear as size of the queue and front as 0
         if self.front is None:
             self.front = self.rear = 0
         else:
@@ -30,10 +25,9 @@ class Queue(object):
 
         self.size += 1
 
-    # to pop an element from the front end of the queue
     def dequeue(self):
         if self.isEmpty():
-            return -1          # queue underflow
+            return -1        
         else:
             self.queue.pop(0)
             self.size -= 1
