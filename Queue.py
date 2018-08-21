@@ -14,7 +14,7 @@ class Queue(object):
 
     def enqueue(self, data):
         if self.size >= self.limit:
-            return -1          # queue overflow
+            return -1      
         else:
             self.queue.append(data)
 
