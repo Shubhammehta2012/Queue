@@ -1,4 +1,3 @@
-# Author: OMKAR PATHAK
 
 class CircularQueue(object):
     def __init__(self, limit = 10):
@@ -7,19 +6,15 @@ class CircularQueue(object):
         self.limit = limit
         self.queue = []
 
-    # for printing the queue
     def __str__(self):
         return ' '.join([str(i) for i in self.queue])
 
-    # for checking if queue is empty
     def isEmpty(self):
         return self.queue == []
 
-    # for checking if the queue is full
     def isFull(self):
         return len(self.queue) == self.limit
 
-    # for adding an element at the rear end
     def enqueue(self, data):
         if self.isFull():
             print('Queue is Full!')
@@ -30,7 +25,6 @@ class CircularQueue(object):
             self.rear += 1
             self.queue.append(data)
 
-    # for deleting the deleting an element from front end
     def dequeue(self):
         if self.isEmpty():
             print('Queue is Empty!')
